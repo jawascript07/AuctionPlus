@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Auction+ - Sell Items</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="#">Home</a>
+			<a href="#">Auction Listings</a>
+			<a href="#">Bidding</a>
+			<a href="#">Sell Items</a>
+			<a href="#">My Account</a>
+			<a class="logout" href="#">Logout</a>
+		</nav>
+	</header>
+	<main>
+		<h1 class="sell-item-heading">Sell an Item</h1>
+		<form class="sell-item-form" action="sellItemServlet" method="post">
+
+			<label class="sell-item-label" for="itemName">Item Name:</label>
+			<input type="text" id="itemName" name="itemName" required>
+
+			<div class="file-upload">
+		    <label for="file-input">Choose File</label>
+		    <input id="file-input" type="file" />
+		  </div>
+		  <button type="submit">Upload</button>
+
+			<label class="sell-item-label" for="itemDescription">Item Description:</label>
+			<textarea id="itemDescription" name="itemDescription" rows="5" cols="40" required></textarea>
+
+			<label class="sell-item-label" for="startingPrice">Starting Price:</label>
+			<input type="number" id="startingPrice" name="startingPrice" min="1" required>
+
+			<label class="sell-item-label" for="auctionDuration">Auction Duration (in hours):</label>
+			<input type="number" id="auctionDuration" name="auctionDuration" min="1" required>
+
+			<button class="sell-btn" type="submit">Submit</button>
+		</form>
+	</main>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Auction+ - Bidding</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Auction Listings</a>
+      <a href="#">Bidding</a>
+      <a href="#">Sell Items</a>
+      <a href="#">My Account</a>
+      <a class="logout" href="#">Logout</a>
+    </nav>
+    <div class="bidding-container">
+      <h1 class="bidding-heading">Bidding</h1>
+      <div class="bidding-auction">
+        <img src="product-image.jpg" alt="Product Image">
+        <div class="bidding-auction-info">
+          <h2>Product Name</h2>
+          <p>Product Description</p>
+          <p>Current Highest Bid: $50.00</p>
+          <p>Starting Bid: $10.00</p>
+          <p>Bids: 5</p>
+          <p>Time Remaining: 1 day 2 hours</p>
+          <form action="bid.php" method="POST">
+            <div class="bidding-form-group">
+              <label for="bid_amount">Enter Bid Amount:</label>
+              <input type="text" id="bid_amount" name="bid_amount" required>
+            </div>
+            <button type="submit" class="btn bidding-btn">Bid Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
